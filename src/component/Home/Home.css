@@ -1,0 +1,203 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 10%;
+  min-height: fit-content;
+}
+.home-parent {
+  display: flex;
+  align-items: center;
+  color:var(--white);
+}
+.home-details-name {
+  font-size: 30px;
+  font-family: "Poppins SemiBold";
+  text-shadow: -1px 0px 5px var(--blue);
+  margin-top: 10px;
+}
+
+.home-details-role {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 24px 0;
+}
+
+.home-details-role h1 {
+  font-size: 35px;
+  font-family: "Poppins Bold";
+  text-shadow: -1px 0px 5px var(--blue);
+}
+.primary-text {
+  color: var(--weight);
+  text-shadow: -1px 0px 5px var(--blue);
+}
+
+.highlighted-text {
+  color: var(--dark-orange);
+  text-shadow: -1px 0px 5px var(--blue);
+  backdrop-filter: blur(20px);
+  font-family: "Poppins ExtraBold";
+}
+.home-role-tagline {
+  font-size: 19px;
+  margin: 5px 0 0 0;
+  font-family: "Poppins Light";
+  text-shadow: -1px 0px 5px var(--blue);
+}
+.home-options .highlighted-btn {
+  margin: 0 0 0 28px;
+}
+.home-options .highlighted-btn:hover {
+  margin: 0 0 0 28px;
+  background-color: var(--white);
+  color: var(--blue);
+}
+.home-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 var(--white);
+  height: 380px;
+  width: 380px;
+  margin: 0 0 0 20px;
+  border-radius: 50%;
+}
+.home-picture-background {
+  height: 92%;
+  width: 92%;
+  background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0),
+      var(--blue)
+    ),
+    url("../../assets/image/me.jpeg");
+  background-size: cover;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-picture-background:hover {
+  transform: scale(1.07);
+  transition: 1s ease-out;
+}
+
+.social-media-container .social-media-container-icon a {
+  color: var(--white);
+  padding: 15px;
+  padding-left: 0px;
+  font-size: 25px;
+}
+.social-media-container .i {
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+
+.social-media-container .social-media-container-icon a .i:hover {
+    color:var(--dark-orange);
+  transform: scale(1.4);
+  transition: 0.5s ease-out;
+}
+
+@media screen and (max-width: 1110) {
+  .home-picture-background {
+    margin: 0 0 0 80px;
+  }
+  .home-details-name {
+    font-size: 20px;
+  }
+  .home-options .primary-text {
+    font-size: 12px;
+  }
+  .home-options .btn {
+    width: 120px;
+    padding: 11px 0;
+    z-index: 700;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .home-picture {
+    width: 300px;
+    height: 300px;
+    margin: 0 0 0 4px;
+  }
+  .home-role-tagline {
+    background-color: var(  --blue-trans);
+  }
+}
+@media screen and (max-width: 810px) {
+  .home-picture {
+    margin: 0px;
+  }
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .home-parent {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-details {
+    margin: 25px 0 0;
+  }
+  .primary-text {
+    font-size: 23px;
+    line-height: 26px;
+  }
+  .primary-text h1 {
+    font-size: 25px;
+  }
+
+  .home-options .highlighted-btn {
+    margin: 0 !important;
+  }
+  .home-options .home-details-role {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .home-picture {
+    height: 275px;
+    width: 275px;
+    margin-top: 29px;
+  }
+  .home.details {
+    width: 90%;
+  }
+  .primary-text {
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 10px;
+    line-height: 23px;
+    background-color: var(--blue-trans);
+  }
+  .primary-text h1 {
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px;
+  }
+  .primary-text .home-role-tagline {
+    margin: 5px;
+    line-height: 0px;
+    font-size: 15px;
+    background-color: rgba(238, 238, 238, 0.137);
+  }
+
+  .home-options .btn {
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+  }
+}

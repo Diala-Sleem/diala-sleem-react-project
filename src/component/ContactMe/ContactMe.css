@@ -1,0 +1,63 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  width: 90%;
+  padding: 20px;
+}
+.errorMassage {
+  font-size: 5px;
+  font-weight: lighter;
+  color: var(--orange);
+  text-align: right;
+  padding: 3px;
+}
+.formContainer label {
+  padding-right: 20px;
+  width: 120px;
+  font-size:15px;
+}
+.formContainer input {
+  width: 95%;
+}
+
+.inputForm {
+  padding-top: 10px;
+}
+
+.inputFormSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.formContainer .inputFormTextarea {
+    overflow:auto;
+      width: 100%;
+       display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.formContainer .inputFormTextarea textarea{
+    overflow:auto;
+          width: 80%;
+}
+
+.redBorder{
+  border: 1px solid var(--dark-orange);
+  color:var( --toast-shadow);
+  background-color: var(--orange-shadow);
+}
