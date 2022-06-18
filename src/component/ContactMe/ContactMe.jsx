@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import "./ContactMe.css";
 //---------------------------------
 import { UserContext } from "../../UserContext/UserContext";
