@@ -13,7 +13,7 @@ import { UserContext } from "../../UserContext/UserContext";
 //*****************************************************/
 
 export default function Layout () {
-  const [contextValue, setContextValue] = useState('hi');
+  const [contextValue, setContextValue] = useState([]);
   return (
     <div className="layout-container">
       {

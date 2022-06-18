@@ -10,7 +10,7 @@ export default function ContactMe() {
   const {
     register,
     handleSubmit,
-    watch,
+    //watch,
     setFocus,
     // reset,
 
@@ -20,35 +20,36 @@ export default function ContactMe() {
   // console.log("errors", errors);
   //----------------------------------------------------------------
   //---------------------watch and change context-------------------------------------------
-  const { contextValue, setContextValue } = useContext(UserContext);
-  const [watchDate, setWatchData] = useState("");
-
-  const buttonOnSubmit = () => {
-    setWatchData(
-      watch({
-        firstName: "firstName",
-        lastName: "lastName",
-        message: "message",
-        title: "title",
-        yourMail: "yourMail",
-        yourMobile: "yourMobile",
-      })
-    );
-    setContextValue({
-      firstName: watchDate.firstName,
-      lastName: watchDate.lastName,
-      message: watchDate.message,
-      title: watchDate.title,
-      yourMail: watchDate.yourMail,
-      yourMobile: watchDate.yourMobile,
-    });
-    console.log("watchDate", watchDate);
-  };
+  //***************************************************************** */
+  // const [watchDate, setWatchData] = useState("");
+  // const buttonOnSubmit = () => {
+  //   setWatchData(
+  //     watch({
+  //       firstName: "firstName",
+  //       lastName: "lastName",
+  //       message: "message",
+  //       title: "title",
+  //       yourMail: "yourMail",
+  //       yourMobile: "yourMobile",
+  //     })
+  //   );
+    // setContextValue({
+    //   firstName: watchDate.firstName,
+    //   lastName: watchDate.lastName,
+    //   message: watchDate.message,
+    //   title: watchDate.title,
+    //   yourMail: watchDate.yourMail,
+    //   yourMobile: watchDate.yourMobile,
+    // });
+    // console.log("watchDate", watchDate);
+  //};
 
   //-------------------------sendEmail---------------------------------------
+  const { contextValue, setContextValue } = useContext(UserContext);
+ 
 
   const sendEmail = (values) => {
-    console.log(values);
+    // console.log(values);
     // emailjs
     //   .sendForm(
     //     "service_npv8uhi",
@@ -60,6 +61,19 @@ export default function ContactMe() {
     //     console.log("Ok", res);
     //   })
     //   .catch((error) => console.log(error));
+    contextValue &&
+      setContextValue([
+        ...contextValue,
+        {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          message: values.message,
+          title: values.title,
+          yourMail: values.yourMail,
+          yourMobile: values.yourMobile,
+        },
+      ])
+    console.log("contextValue", contextValue);
   };
 
   //-------------setFocus--------------------
@@ -181,9 +195,7 @@ export default function ContactMe() {
           {errors.message && <p className="errorMassage">Message required</p>}
         </div>
 
-        <button type="submit" onClick={buttonOnSubmit}>
-          Submit
-        </button>
+        <button type="submit" /*onClick={buttonOnSubmit}*/>Submit</button>
       </form>
       <div>
         {/* <div>

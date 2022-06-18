@@ -1,17 +1,8 @@
-import React, { useContext } from "react";
-import { UserContext } from "../../UserContext/UserContext";
+import React from 'react'
+import ContactApi from './ContactApi'
 
-export default function ContactApi() {
-  const { contextValue } = useContext(UserContext);
-  console.log("contextValue", contextValue);
+export default function SignUp() {
   return (
-    <div>
-      <p>{contextValue.firstName}</p>
-      <p>{contextValue.lastName}</p>
-      <p>{contextValue.message}</p>
-      <p>{contextValue.title}</p>
-      <p>{contextValue.yourMail}</p>
-      <p>{contextValue.yourMobile}</p>
-    </div>
-  );
+    <div><ContactApi/></div>
+  )
 }
