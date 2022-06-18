@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-
 import "./ContactMe.css";
+//---------------------------------
+import { UserContext } from "../../UserContext/UserContext";
+//---------------------------------
 
 export default function ContactMe() {
   const {
     register,
     handleSubmit,
-    // watch,
+    watch,
     setFocus,
     // reset,
 
@@ -16,34 +18,52 @@ export default function ContactMe() {
   } = useForm();
   //----------------------------------------------------------------
   // console.log("errors", errors);
-  // const watchValues = watch(["title"]);
-  // console.log(watchValues);
   //----------------------------------------------------------------
+  //---------------------watch and change context-------------------------------------------
+  const { contextValue, setContextValue } = useContext(UserContext);
+  const [watchDate, setWatchData] = useState("");
 
-  const sendEmail = async (values) => {
+  const buttonOnSubmit = () => {
+    setWatchData(
+      watch({
+        firstName: "firstName",
+        lastName: "lastName",
+        message: "message",
+        title: "title",
+        yourMail: "yourMail",
+        yourMobile: "yourMobile",
+      })
+    );
+    setContextValue({
+      firstName: watchDate.firstName,
+      lastName: watchDate.lastName,
+      message: watchDate.message,
+      title: watchDate.title,
+      yourMail: watchDate.yourMail,
+      yourMobile: watchDate.yourMobile,
+    });
+    console.log("watchDate", watchDate);
+  };
+
+  //-------------------------sendEmail---------------------------------------
+
+  const sendEmail = (values) => {
     console.log(values);
-    emailjs
-      .sendForm(
-        "service_npv8uhi",
-        "template_vrtk67n",
-        <p>{values}</p>,
-        "F3uTeIympeqwCmsfT"
-      )
-      .then(
-        (result) => {
-          console.log("Ok", result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  }
+    // emailjs
+    //   .sendForm(
+    //     "service_npv8uhi",
+    //     "template_bw0s4sk",
+    //     values,
+    //     "F3uTeIympeqwCmsfT"
+    //   )
+    //   .then((res) => {
+    //     console.log("Ok", res);
+    //   })
+    //   .catch((error) => console.log(error));
+  };
 
-
-  
-
-  //---------------------------------
-  React.useEffect(() => {
+  //-------------setFocus--------------------
+  useEffect(() => {
     setFocus("firstName");
   }, [setFocus]);
   //----------------------------
@@ -161,8 +181,15 @@ export default function ContactMe() {
           {errors.message && <p className="errorMassage">Message required</p>}
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={buttonOnSubmit}>
+          Submit
+        </button>
       </form>
+      <div>
+        {/* <div>
+          <p>{contextValue.firstName}</p>
+        </div> */}
+      </div>
     </div>
   );
 }

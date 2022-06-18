@@ -10,7 +10,7 @@
   align-items: center;
   background-color: var(--blue);
   color: var(--white);
-  width: 90%;
+  width: 50%;
   padding: 20px;
 }
 .errorMassage {
@@ -60,4 +60,29 @@
   border: 1px solid var(--dark-orange);
   color:var( --toast-shadow);
   background-color: var(--orange-shadow);
+}
+@media screen and (max-width: 1110) {
+ .formContainer {
+  width:100wh;
+  padding: 0px;
+}
+.formParent {
+
+  width: 100%;
+  padding: 20px;
+}
+}
+
+
+@media screen and (max-width: 375px) {
+
+.formContainer {
+  width:100wh;
+  padding: 0px;
+}
+.formParent {
+
+  width: 90%;
+  padding: 20px;
+}
 }

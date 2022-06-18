@@ -103,7 +103,7 @@ body::after {
     width: 70vmin;
     height: 70vmin;
     left: auto;
-    right: -10vmin;
+    right: 10vmin;
     top: auto;
     bottom: 0;
     animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;

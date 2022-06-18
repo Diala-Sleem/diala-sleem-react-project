@@ -8,9 +8,9 @@ function App () {
 
   return (
     <div className="App">
-      <Router>
-        <Layout />
-      </Router>
+        <Router>
+          <Layout />
+        </Router>
     </div>
   );
 }
