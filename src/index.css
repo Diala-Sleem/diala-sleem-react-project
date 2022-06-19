@@ -78,8 +78,9 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-evenly;
-  overflow: hidden;
+  overflow: auto;
   position: relative; 
+  background-color: var(--blue);
 }
 
 
@@ -234,3 +235,5 @@ body ::-webkit-scrollbar-thumb {
   transform: translateY(80px);
   transition: all 0.8s ease;
 }
+
+

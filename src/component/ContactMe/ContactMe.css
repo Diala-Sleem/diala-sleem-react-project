@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: fit-content;
+  height: 100vh;
+  width: 100wh;
+  position: relative;
+  top: 70px;
 }
 .formParent {
   display: flex;
@@ -11,26 +16,31 @@
   background-color: var(--blue);
   color: var(--white);
   width: 50%;
-  padding: 20px;
+  padding: 15px 0 0 0;
+  margin: 0;
+  border-radius: 10px;
 }
 .errorMassage {
-  font-size: 5px;
+  font-size: 10px !important;
+  padding: 0;
+  margin: 0;
   font-weight: lighter;
   color: var(--orange);
-  text-align: right;
-  padding: 3px;
+  text-align: center;
+  text-transform: center;
 }
 .formContainer label {
-  padding-right: 20px;
   width: 120px;
-  font-size:15px;
+  font-size: 15px;
 }
 .formContainer input {
   width: 95%;
+  border-radius: 3px;
+  border: none;
 }
 
 .inputForm {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .inputFormSelect {
@@ -39,50 +49,107 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  border: none;
 }
 
 .formContainer .inputFormTextarea {
-    overflow:auto;
-      width: 100%;
-       display: flex;
-  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   flex-direction: column;
-
 }
 
-.formContainer .inputFormTextarea textarea{
-    overflow:auto;
-          width: 80%;
+.formContainer .inputFormTextarea textarea {
+  overflow: auto;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+}
+.formContainer textarea::placeholder,
+input::placeholder {
+  font: 15px sans-serif;
+  padding: 5px;
 }
 
-.redBorder{
-  border: 1px solid var(--dark-orange);
-  color:var( --toast-shadow);
+.redBorder {
+  color: var(--toast-shadow);
   background-color: var(--orange-shadow);
 }
+
+.contact-btn {
+  margin: 28px;
+  color: var(--dark-orange);
+  font-family: "Poppins ExtraBold";
+  border: none;
+  border-radius: 10px;
+}
+.contact-btn:hover {
+  color: var(--blue);
+}
+
+select {
+  appearance: select;
+  color: var(--dark-orange);
+  font-family: "Poppins ExtraBold";
+  outline: none;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 0;
+  cursor: pointer;
+}
+.selectOption {
+  font-size: 10px;
+  font-weight: normal;
+  font-family: "Poppins Regular";
+
+}
+.thanksMsg {
+  background-color: var(--dark-orange);
+  border-radius: 0px 10px 0px 10px;
+  font-size: 10px;
+  padding: 5px;
+  animation: text-shadow 1.5s ease-out;
+}
+
+@keyframes text-shadow {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-20em);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 1110) {
- .formContainer {
-  width:100wh;
-  padding: 0px;
+  .formContainer {
+    width: 100wh;
+    padding: 0px;
+  }
 }
-.formParent {
-
-  width: 100%;
-  padding: 20px;
+@media screen and (max-width: 900px) {
+  .formContainer {
+    width: 100wh;
+    padding: 0px;
+  }
+  .formParent {
+    width: 80%;
+    padding: 20px;
+  }
 }
-}
-
-
 @media screen and (max-width: 375px) {
-
-.formContainer {
-  width:100wh;
-  padding: 0px;
-}
-.formParent {
-
-  width: 90%;
-  padding: 20px;
-}
+  .formContainer {
+    width: 100wh;
+    padding: 0px;
+  }
+  .formParent {
+    width: 90%;
+    padding: 20px;
+  }
 }

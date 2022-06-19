@@ -1,4 +1,4 @@
-.signUp-container {
+.about-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,26 +8,26 @@
     top:70px;
     margin:20px;
 }
-
-.signUp-parent {
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  flex-direction: column;
-  margin-left: 50px;
-  background-color: var(--blue-trans);
-  width: 90%;
-      padding: 20px;
-          border-radius: 10px;
-
-
+.about-parent {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    flex-direction: column;
+    margin-left: 50px;
+    background-color: var(--blue-trans);
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    
+    
 }
+/* 
 
-.signUp-innerText {
+.about-innerText {
   color: var(--weight);
 }
 
-.signUp-text {
+.about-text {
   color: var(--dark-orange);
   text-shadow: -1px 0px 5px var(--blue);
   backdrop-filter: blur(20px);
@@ -35,17 +35,17 @@
 
 }
 
-.signUp-text-massage {
+.about-text-massage {
   width: 100%;
   padding: 20px;
   font-size: 15px;
   font-weight: normal;
   color: var(--blue)
 }
-.signUp-text-box {
+.about-text-box {
   background-color: var(--white);
   width: 70vw;
   padding: 20px;
   border-radius: 10px;
 
-}
+} */

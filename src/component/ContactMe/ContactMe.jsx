@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-// import emailjs from "emailjs-com";
+// import emailjs from "@emailjs/browser";
 import "./ContactMe.css";
+import Test from './Test'
 //---------------------------------
 import { UserContext } from "../../UserContext/UserContext";
 //---------------------------------
@@ -10,87 +11,66 @@ export default function ContactMe() {
   const {
     register,
     handleSubmit,
-    //watch,
     setFocus,
-    // reset,
-
     formState: { errors },
   } = useForm();
   //----------------------------------------------------------------
   // console.log("errors", errors);
   //----------------------------------------------------------------
-  //---------------------watch and change context-------------------------------------------
-  //***************************************************************** */
-  // const [watchDate, setWatchData] = useState("");
-  // const buttonOnSubmit = () => {
-  //   setWatchData(
-  //     watch({
-  //       firstName: "firstName",
-  //       lastName: "lastName",
-  //       message: "message",
-  //       title: "title",
-  //       yourMail: "yourMail",
-  //       yourMobile: "yourMobile",
-  //     })
-  //   );
-    // setContextValue({
-    //   firstName: watchDate.firstName,
-    //   lastName: watchDate.lastName,
-    //   message: watchDate.message,
-    //   title: watchDate.title,
-    //   yourMail: watchDate.yourMail,
-    //   yourMobile: watchDate.yourMobile,
-    // });
-    // console.log("watchDate", watchDate);
-  //};
 
-  //-------------------------sendEmail---------------------------------------
+  //-------------------------setContextValue------------------------------
   const { contextValue, setContextValue } = useContext(UserContext);
- 
+  const [thanksMsg, setThanksMsg] = useState("");
 
-  const sendEmail = (values) => {
-    // console.log(values);
-    // emailjs
-    //   .sendForm(
-    //     "service_npv8uhi",
-    //     "template_bw0s4sk",
-    //     values,
-    //     "F3uTeIympeqwCmsfT"
-    //   )
-    //   .then((res) => {
-    //     console.log("Ok", res);
-    //   })
-    //   .catch((error) => console.log(error));
-    contextValue &&
-      setContextValue([
-        ...contextValue,
-        {
-          firstName: values.firstName,
-          lastName: values.lastName,
-          message: values.message,
-          title: values.title,
-          yourMail: values.yourMail,
-          yourMobile: values.yourMobile,
-        },
-      ])
+  const sendData = (values) => {
+    setContextValue([
+      ...contextValue,
+      {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        message: values.message,
+        title: values.title,
+        yourMail: values.yourMail,
+        yourMobile: values.yourMobile,
+      },
+    ]);
+    setThanksMsg("Thank you for your message");
     console.log("contextValue", contextValue);
   };
+
+  //-------------------------sendEmail----------------------------------
+
+  // const sendEmail = (values) => {
+  //   console.log("sendEmail", values);
+  //   emailjs
+  //     .sendForm(
+  //       "service_npv8uhi",
+  //       "template_bw0s4sk",
+  //       ...values,
+  //       "F3uTeIympeqwCmsfT"
+  //     )
+  //     .then((res) => {
+  //       console.log("Ok", res);
+  //     })
+  //     .catch((error) => console.log(error));
+  // };
 
   //-------------setFocus--------------------
   useEffect(() => {
     setFocus("firstName");
-  }, [setFocus]);
+    setThanksMsg("");
+  }, [setFocus, contextValue]);
   //----------------------------
 
   return (
     <div className="formContainer">
-      <form onSubmit={handleSubmit(sendEmail)} className="formParent">
+      <form onSubmit={handleSubmit(sendData)} className="formParent">
         <h4>Contact Me</h4>
 
         <div className="inputForm">
           <label htmlFor="firstName">First name</label>
           <input
-            className={`${errors.firstName && "redBorder"}`}
+            className={`${errors.firstName ? "redBorder" : ""}`}
             name="firstName"
             type="text"
             placeholder="First name"
@@ -170,11 +150,21 @@ export default function ContactMe() {
             {...register("title", { required: true })}
             className={`${errors.title && "redBorder"}`}
           >
-            <option value="">Select</option>
-            <option value="Mr">Mr</option>
-            <option value="Mrs">Mrs</option>
-            <option value="Miss">Miss</option>
-            <option value="Dr">Dr</option>
+            <option className="selectOption" value="">
+              Select
+            </option>
+            <option className="selectOption" value="Mr">
+              Mr
+            </option>
+            <option className="selectOption" value="Mrs">
+              Mrs
+            </option>
+            <option className="selectOption" value="Miss">
+              Miss
+            </option>
+            <option className="selectOption" value="Dr">
+              Dr
+            </option>
           </select>
           {errors.title && <p className="errorMassage">you don't Select</p>}
         </div>
@@ -187,20 +177,23 @@ export default function ContactMe() {
             placeholder="Your message"
             {...register("message", {
               required: true,
-              maxLength: 500,
-              minLength: 20,
+              maxLength: 1000,
+              minLength: 5,
               rows: 5,
             })}
           />
           {errors.message && <p className="errorMassage">Message required</p>}
         </div>
 
-        <button type="submit" /*onClick={buttonOnSubmit}*/>Submit</button>
+        <button type="submit" className="contact-btn">
+          Submit
+        </button>
       </form>
       <div>
-        {/* <div>
-          <p>{contextValue.firstName}</p>
-        </div> */}
+        <div className={thanksMsg && "formParent thanksMsg"}>
+          <p>{thanksMsg}</p>
+        </div>
+        <Test/>
       </div>
     </div>
   );
