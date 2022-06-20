@@ -23,6 +23,7 @@ export default function ContactMe() {
   const [thanksMsg, setThanksMsg] = useState("");
 
   const sendData = (values) => {
+    
     setContextValue([
       ...contextValue,
       {
@@ -58,7 +59,6 @@ export default function ContactMe() {
   //-------------setFocus--------------------
   useEffect(() => {
     setFocus("firstName");
-    setThanksMsg("");
   }, [setFocus, contextValue]);
   //----------------------------
 
@@ -193,7 +193,6 @@ export default function ContactMe() {
         <div className={thanksMsg && "formParent thanksMsg"}>
           <p>{thanksMsg}</p>
         </div>
-        <Test/>
       </div>
     </div>
   );
