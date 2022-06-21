@@ -27,6 +27,11 @@ const Header = () => (
         Sign Up
       </NavLink>
     </li>
+    <li>
+      <NavLink to="/test" className="headerLink">
+        Test
+      </NavLink>
+    </li>
   </ul>
 );
 

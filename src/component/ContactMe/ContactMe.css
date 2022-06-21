@@ -20,6 +20,7 @@
   margin: 0;
   border-radius: 10px;
 }
+
 .errorMassage {
   font-size: 10px !important;
   padding: 0;
@@ -103,7 +104,6 @@ select {
   font-size: 10px;
   font-weight: normal;
   font-family: "Poppins Regular";
-
 }
 .thanksMsg {
   background-color: var(--dark-orange);
@@ -153,3 +153,69 @@ select {
     padding: 20px;
   }
 }
+
+/*todo-------------*/
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: fit-content;
+  height: 100vh;
+  width: 100wh;
+  position: relative;
+  top: 70px;
+}
+.todoParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  width: 100%;
+  padding: 15px 0 0 0;
+  margin: 0;
+  border-radius: 10px;
+
+}
+
+.listParent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: fit-content;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 70px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  width: 70%;
+  padding: 15px 0 0 0;
+  margin: 0;
+  border-radius: 10px;
+}
+.list li {
+  background-color: var(--dark-orange);
+  border-radius: 10px 10px 10px 0px;
+  font-size: 10px;
+  padding: 5px;
+  margin: 5px;
+
+  animation: text-shadow 1.5s ease-out;
+  list-style: none;
+}
+.list-btn {
+  margin: 5px;
+  color: var(--dark-orange);
+  font-family: "Poppins ExtraBold";
+  border: none;
+  border-radius: 10px;
+}
+
+

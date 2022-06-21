@@ -10,6 +10,7 @@ import ContactMe from "../ContactMe/ContactMe";
 import SignUp from "../SignUp/SignUp";
 //*****************************************************/
 import { UserContext } from "../../UserContext/UserContext";
+import Test from "../ContactMe/Test";
 //*****************************************************/
 
 export default function Layout () {
@@ -20,14 +21,15 @@ export default function Layout () {
         //-------------------------------------
       }
       <Header />
-      <UserContext.Provider value={{contextValue, setContextValue}}>
+      <UserContext.Provider value={{ contextValue, setContextValue }}>
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<ContactMe />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
-        <Footer />;
+        <Footer />
       </UserContext.Provider>
       {
         //-------------------------------------

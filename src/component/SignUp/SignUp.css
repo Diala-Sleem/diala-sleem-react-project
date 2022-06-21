@@ -3,10 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: fit-content;
-    width:100wh;
-    position: relative;
-    top:70px;
-    margin:20px;
+  width: 100wh;
+  top: 70px;
+  margin: 50px 0px 0px 0px;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .signUp-parent {
@@ -14,14 +16,16 @@
   align-items: center;
   color: var(--white);
   flex-direction: column;
-  margin-left: 50px;
   background-color: var(--blue-trans);
-  width: 90%;
-      padding: 20px;
-          border-radius: 10px;
+  padding: 50px;
+  border-radius: 10px;
+    min-height: 100%;
 
+    height:fit-content;
 
 }
+
+
 
 .signUp-innerText {
   color: var(--weight);
@@ -32,7 +36,6 @@
   text-shadow: -1px 0px 5px var(--blue);
   backdrop-filter: blur(20px);
   font-family: "Poppins ExtraBold";
-
 }
 
 .signUp-text-massage {
@@ -40,12 +43,155 @@
   padding: 20px;
   font-size: 15px;
   font-weight: normal;
-  color: var(--blue)
+  color: var(--blue);
 }
 .signUp-text-box {
   background-color: var(--white);
-  width: 70vw;
-  padding: 20px;
+  width: 50vw;
   border-radius: 10px;
+}
+
+.signUp-container label {
+  width: 200px;
+  font-size: 12px;
+  text-align: center;
+}
+.signUp-container input {
+  width: 30vw;
+  border-radius: 3px;
+  border: none;
+}
+
+.inputForm {
+  margin: 5px;
+  text-align: center;
+}
+
+.redBorder {
+  color: var(--toast-shadow);
+  background-color: var(--orange-shadow);
+}
+
+.contact-btn {
+  margin: 28px;
+  color: var(--dark-orange);
+  font-family: "Poppins ExtraBold";
+  border: none;
+  border-radius: 10px;
+}
+.contact-btn:hover {
+  color: var(--blue);
+}
+
+
+
+
+@media screen and (max-width: 1110) {
+  .signUp-container {
+    width: 100wh;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .signUp-container {
+    width: 100wh;
+    padding: 0px;
+  }
+  .signUp-parent {
+    width: 80%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .signUp-container {
+    width: 100wh;
+    padding: 0px;
+  }
+  .signUp-parent {
+    width: 90%;
+    padding: 20px;
+  }
+}
+/*--------not valid bot------------*/
+@keyframes slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -120px 60px;
+  }
+}
+
+#InfoBanner{
+  margin: 10px;
+  position: absolute;
+  left: -20px;
+  top: 115px;
+  text-align: center;
+  width: 100%;
+}
+.reversed {
+  display: inline-block;
+  padding: 0.3em;
+  padding-left: 0.3em;
+  margin-left: 0.8em;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1;
+  color:var(--white);
+  font-size: 15px;
+  background-color:var(--error-message);
+}
+.reversed:before, .reversed:after {
+  content: '';
+  width: 0;
+  height: 0;
+  right: -0.8em;
+  position: absolute;
+  top: 0;
+  border-top: 0.8em solid var(--error-message);
+}
+.reversed:after {
+  top: auto;
+  bottom: 0;
+  border-top: none;
+  border-bottom: 0.8em solid var(--error-message);
+}
+
+@keyframes tilt {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: 0px;
+  }
 
 }
+.reversedLeft{
+    animation: tilt 2s ;
+
+  margin-left:15px;
+  border-radius: 0px 5px 5px 0px;
+}
+.reversedLeft:before, .reversedLeft:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 0.8em solid transparent;
+  left: -0.8em;
+  position: absolute;
+}
+.reversedLeft:after {
+  top: auto;
+  bottom: 0;
+  border-top: 0.8em solid var(--error-message);
+  border-bottom: none;
+}
+.reversedLeft:before {
+  bottom: auto;
+  top:0;
+  border-bottom: 0.8em solid var(--error-message);
+  border-top: none;
+}
+

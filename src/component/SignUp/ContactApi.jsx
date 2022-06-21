@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../UserContext/UserContext";
 import "./SignUp.css";
+import Note from './Note'
 
 export default function ContactApi() {
   const { contextValue } = useContext(UserContext);
   console.log("contextValue", contextValue);
-  return contextValue.map((conVal) => {
+  return contextValue.map((conVal,index) => {
     return (
-      <div className="signUp-container">
-        <div className="signUp-parent">
-          <h5 key={conVal.yourMail} className="signUp-innerText">
+      <div className="signUp-container" key={conVal.id}>
+        <div className="signUp-parent ">
+          <h5 className="signUp-innerText ">
             <span className="signUp-text">First Name:</span>{" "}
             {conVal.title + " "}
             {conVal.firstName} {conVal.lastName}
@@ -26,6 +27,7 @@ export default function ContactApi() {
             <div className=" signUp-text-box">
               <p className=" signUp-text-massage">{conVal.message}</p>
             </div>
+        <Note/>
           </p>
         </div>
       </div>

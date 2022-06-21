@@ -75,5 +75,5 @@ export default function Home() {
         <div className="home-picture-background"></div>
       </div>
     </div>
-  );
+  )
 }

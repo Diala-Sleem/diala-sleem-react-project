@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useForm } from "react-hook-form";
+
 // import emailjs from "@emailjs/browser";
 import "./ContactMe.css";
-import Test from './Test'
 //---------------------------------
 import { UserContext } from "../../UserContext/UserContext";
+//-------------------
+
 //---------------------------------
 
 export default function ContactMe() {
@@ -14,17 +16,23 @@ export default function ContactMe() {
     setFocus,
     formState: { errors },
   } = useForm();
+
+  
   //----------------------------------------------------------------
   // console.log("errors", errors);
   //----------------------------------------------------------------
 
+
   //-------------------------setContextValue------------------------------
   const { contextValue, setContextValue } = useContext(UserContext);
   const [thanksMsg, setThanksMsg] = useState("");
-
+  // const [values, setValues] = useState("");
+  let randomNum = Math.floor(Math.random() * 1000000);
+  
+  
   const sendData = (values) => {
-    
-    setContextValue([
+   
+    const newValues = [
       ...contextValue,
       {
         firstName: values.firstName,
@@ -33,10 +41,13 @@ export default function ContactMe() {
         title: values.title,
         yourMail: values.yourMail,
         yourMobile: values.yourMobile,
+        id: randomNum,
       },
-    ]);
+    ];
+    setContextValue(newValues);
+
     setThanksMsg("Thank you for your message");
-    console.log("contextValue", contextValue);
+    // console.log("contextValue", contextValue);
   };
 
   //-------------------------sendEmail----------------------------------
@@ -193,6 +204,8 @@ export default function ContactMe() {
         <div className={thanksMsg && "formParent thanksMsg"}>
           <p>{thanksMsg}</p>
         </div>
+      </div>
+      <div>
       </div>
     </div>
   );

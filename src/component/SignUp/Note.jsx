@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./ContactMe.css";
+import React, { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
+import "./note.css";
 
 const defaultState = {
   inputVal: "",
@@ -50,6 +50,12 @@ export default function Note() {
     setState({ ...state, isDuplicate: false, showErrorLength: false });
   }
 
+  //-----------------
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   document.title = `You clicked ${state} times`;
+  // }, [state, setState]);
+  //--------------
   return (
     <div className="todoContainer">
       <div className="todoParent">
@@ -92,10 +98,10 @@ export default function Note() {
                 <div> {task}</div>
 
                 <button onClick={(e) => setDone(e)} className="list-btn">
-                  Set to Done
+                  Done
                 </button>
                 <button onClick={() => deleteTask(index)} className="list-btn">
-                  Delete task
+                  Delete
                 </button>
               </li>
             ))}
