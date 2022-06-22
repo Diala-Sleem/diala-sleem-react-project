@@ -40,7 +40,7 @@ export default function SpringParallax() {
               <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center ">
                 <h2>
                   <br className="hidden lg:inline-block" /> &#123;{" "}
-                  <span class="text-danger">I love </span> &#40; &lt; React
+                  <span className="text-danger">I love </span> &#40; &lt; React
                   /&gt; &lt;Javascript/&gt; &lt;CSS/&gt; &amp; &lt;HTML/&gt;
                   &#41; &#125;
                 </h2>

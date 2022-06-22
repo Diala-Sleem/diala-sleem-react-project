@@ -10,7 +10,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Footer() {
   return (
-    <Navbar fixed="bottom" fluid className="footer-edit">
+    <Navbar fixed="bottom"className="footer-edit">
       <Container>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

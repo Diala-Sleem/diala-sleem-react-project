@@ -1,8 +1,10 @@
 .footer-edit {
   background-color: var(--blue);
-  height: 30px;
+  height: 35px;
 }
 .footer-text {
-  color: var(--orange) !important;
+  color: var(--white) !important;
   padding-right: 25px;
+  position: relative;
+  bottom:28px
 }
