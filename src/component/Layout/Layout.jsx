@@ -8,6 +8,9 @@ import Footer from "../Footer/Footer";
 import AboutMe from "../AboutMe/AboutMe";
 import ContactMe from "../ContactMe/ContactMe";
 import SignUp from "../SignUp/SignUp";
+import Cards from "../AboutMe/Cards";
+
+
 //*****************************************************/
 import { UserContext } from "../../UserContext/UserContext";
 import Test from "../../Test";
@@ -28,6 +31,8 @@ export default function Layout () {
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<ContactMe />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/cards" element={<Cards />} />
+
           <Route path="/test" element={<Test />} />
           <Route path="/contactApi" element={<ContactApi />} />
         </Routes>
