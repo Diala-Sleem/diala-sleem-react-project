@@ -10,7 +10,8 @@ import ContactMe from "../ContactMe/ContactMe";
 import SignUp from "../SignUp/SignUp";
 //*****************************************************/
 import { UserContext } from "../../UserContext/UserContext";
-import Test from "../ContactMe/Test";
+import Test from "../../Test";
+import ContactApi from "../SignUp/ContactApi";
 //*****************************************************/
 
 export default function Layout () {
@@ -28,6 +29,7 @@ export default function Layout () {
           <Route path="/contact" element={<ContactMe />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/contactApi" element={<ContactApi />} />
         </Routes>
         <Footer />
       </UserContext.Provider>

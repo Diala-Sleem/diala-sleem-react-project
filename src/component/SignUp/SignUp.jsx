@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
+             import {Link} from "react-router-dom";
 
-import ContactApi from "./ContactApi";
+// import ContactApi from "./ContactApi";
 
 import "./SignUp.css";
 import { UserContext } from "../../UserContext/UserContext";
@@ -28,7 +29,7 @@ export default function SignUp () {
 
     (username === "diala.slim@yahoo.com") & (password === "1234")
       ? setApperanse(true)
-      : setData("User not valid!! ");
+      : setData("The user is not logged in.!! ");
   };
   // console.log("apperanse,Data======>", apperanse, data);
   return (
@@ -40,7 +41,6 @@ export default function SignUp () {
       >
         <label>Register just for the team</label>
         <p className="reversed">{contextValue.length} massage(s)</p>
-
         <input
           type="text"
           {...register("username")}
@@ -55,17 +55,16 @@ export default function SignUp () {
           placeholder="password"
           className="inputForm"
         />
-
-        <div>
-          <button className="contact-btn">Sign In</button>
-        </div>
-        <div className="signUp">
-          {apperanse ? (
-            <ContactApi />
-          ) : (
-            <p className={"reversed reversedLeft InfoBanner"}>{data}</p>
+        <button type="submit" className="signUp-btn">
+          {apperanse && (
+            <Link to="/contactApi">Sign In</Link>
           )}
-        </div>
+          <b className="reversed reversedLeft InfoBanner">
+            {apperanse
+              ? "Please!"
+              : "The user is not logged in"}
+          </b>
+        </button>
       </form>
     </div>
   );

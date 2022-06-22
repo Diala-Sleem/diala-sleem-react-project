@@ -8,6 +8,7 @@ import { SiHomebridge,  } from "react-icons/si";
 const Header = () => (
   <ul className="header-container">
     <li>
+      
       <NavLink to="/" className="headerLink">
         <SiHomebridge className="i" />
       </NavLink>

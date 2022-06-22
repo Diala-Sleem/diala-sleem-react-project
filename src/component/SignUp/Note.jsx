@@ -12,11 +12,6 @@ const defaultState = {
 
 export default function Note() {
   const [state, setState] = useState(defaultState);
-
-  function updateValue(e) {
-    setState({ ...state, inputVal: e.target.value });
-  }
-
   function addTask(e) {
     e.preventDefault();
     const temporary = [...state.tasks];
@@ -51,20 +46,18 @@ export default function Note() {
   }
 
   //-----------------
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   document.title = `You clicked ${state} times`;
-  // }, [state, setState]);
+  useEffect(()=>{}
+  , [state, setState]);
   //--------------
   return (
     <div className="todoContainer">
       <div className="todoParent">
-        <form onSubmit={addTask}>
+        <form onSubmit={addTask} className="inputForm">
           <div>
             <input
               type="text"
               className="inputForm"
-              onChange={updateValue}
+              onChange={(e) => setState({ ...state, inputVal: e.target.value })}
               value={state.inputVal}
             />
             <button type="submit" className="contact-btn">
@@ -91,8 +84,8 @@ export default function Note() {
           </div>
         )}
 
-        <div className="todoContainer">
-          <ul className="list">
+        <div className="list">
+          <ul >
             {state.tasks.map((task, index) => (
               <li key={task}>
                 <div> {task}</div>

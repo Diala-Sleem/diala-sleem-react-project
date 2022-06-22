@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: fit-content;
-  width: 100wh;
+  width: 100wv;
   top: 70px;
   margin: 50px 0px 0px 0px;
   background-color: var(--white);
@@ -19,13 +19,10 @@
   background-color: var(--blue-trans);
   padding: 50px;
   border-radius: 10px;
-    min-height: 100%;
+  min-height: 100%;
 
-    height:fit-content;
-
+  height: fit-content;
 }
-
-
 
 .signUp-innerText {
   color: var(--weight);
@@ -72,19 +69,16 @@
   background-color: var(--orange-shadow);
 }
 
-.contact-btn {
-  margin: 28px;
+.signUp-btn {
+  margin: 5px;
   color: var(--dark-orange);
   font-family: "Poppins ExtraBold";
   border: none;
   border-radius: 10px;
 }
-.contact-btn:hover {
+.signUp-btn:hover {
   color: var(--blue);
 }
-
-
-
 
 @media screen and (max-width: 1110) {
   .signUp-container {
@@ -96,9 +90,10 @@
   .signUp-container {
     width: 100wh;
     padding: 0px;
+    margin-top: 50px;
   }
   .signUp-parent {
-    width: 80%;
+    width: 100%;
     padding: 20px;
   }
 }
@@ -122,7 +117,7 @@
   }
 }
 
-#InfoBanner{
+#InfoBanner {
   margin: 10px;
   position: absolute;
   left: -20px;
@@ -139,12 +134,13 @@
   text-align: center;
   vertical-align: middle;
   line-height: 1;
-  color:var(--white);
+  color: var(--white);
   font-size: 15px;
-  background-color:var(--error-message);
+  background-color: var(--error-message);
 }
-.reversed:before, .reversed:after {
-  content: '';
+.reversed:before,
+.reversed:after {
+  content: "";
   width: 0;
   height: 0;
   right: -0.8em;
@@ -166,16 +162,16 @@
   50% {
     left: 0px;
   }
-
 }
-.reversedLeft{
-    animation: tilt 2s ;
+.reversedLeft {
+  animation: tilt 2s;
 
-  margin-left:15px;
+  margin-left: 15px;
   border-radius: 0px 5px 5px 0px;
 }
-.reversedLeft:before, .reversedLeft:after {
-  content: '';
+.reversedLeft:before,
+.reversedLeft:after {
+  content: "";
   width: 0;
   height: 0;
   border-left: 0.8em solid transparent;
@@ -190,8 +186,7 @@
 }
 .reversedLeft:before {
   bottom: auto;
-  top:0;
+  top: 0;
   border-bottom: 0.8em solid var(--error-message);
   border-top: none;
 }
-

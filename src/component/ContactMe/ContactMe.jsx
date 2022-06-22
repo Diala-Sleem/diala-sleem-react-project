@@ -47,7 +47,7 @@ export default function ContactMe() {
     setContextValue(newValues);
 
     setThanksMsg("Thank you for your message");
-    // console.log("contextValue", contextValue);
+    console.log("newValues", newValues);
   };
 
   //-------------------------sendEmail----------------------------------

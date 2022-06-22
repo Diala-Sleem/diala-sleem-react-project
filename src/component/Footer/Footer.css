@@ -1,22 +1,11 @@
-.footer-container {
-  height: 17.8%;
-  width: 100%;
-  overflow: center;
-  display: flex;
-  justify-content: center;
+.footer-edit{
+background-color: var(--blue);
+height: 30px;
 }
-.footer-parent {
-  width: 100%;
-  height: 100%;
-  max-width: 1920px;
+.footer-text{
+color: var(--orange)!important;
+padding-right: 20px;
 }
-.footer-parent img{
-  height: 130px;
-  max-width: 100%;
-}
-@media screen and (max-width: 1110px) {
-.footer-parent{
-    display: flex;
-    align-items: flex-end;
-}
-}
+
+
+

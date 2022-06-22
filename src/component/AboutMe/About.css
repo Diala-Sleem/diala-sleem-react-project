@@ -1,51 +1,93 @@
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: fit-content;
-    width:100wh;
-    position: relative;
-    top:70px;
-    margin:20px;
-}
 .about-parent {
     display: flex;
     align-items: center;
     color: var(--white);
     flex-direction: column;
-    margin-left: 50px;
     background-color: var(--blue-trans);
-    width: 90%;
+    width: 100%;
     padding: 20px;
-    border-radius: 10px;
-    
-    
-}
-/* 
 
-.about-innerText {
-  color: var(--weight);
-}
+   }
+   .about-parent2 {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
 
-.about-text {
-  color: var(--dark-orange);
-  text-shadow: -1px 0px 5px var(--blue);
+   }
+
+    .about-text {
+  color: var(--blue);
   backdrop-filter: blur(20px);
-  font-family: "Poppins ExtraBold";
+  font-family: "Poppins light";
 
 }
-
-.about-text-massage {
-  width: 100%;
-  padding: 20px;
-  font-size: 15px;
-  font-weight: normal;
-  color: var(--blue)
+.disply-inline{
+  display: inline;
 }
-.about-text-box {
-  background-color: var(--white);
-  width: 70vw;
-  padding: 20px;
+
+
+  
+.container{
+  margin-top:50px;
+}
+.background {
+  background: linear-gradient(#e66465, #9198e5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.scrollText {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  height: 10rem;
+  width: 25%;
+  text-align: center;
   border-radius: 10px;
+}
 
-} */
+.parallax {
+  margin-right: 15%;
+}
+
+.sticky {
+  margin-left: 15%;
+  background-color: #ff6d6d;
+}
+
+.blue {
+  background-color: #5b65ad;
+  color: white;
+}
+
+.purple {
+  background-color: #9d65d0;
+}
+
+@media (max-width: 750px) {
+  .card {
+    width: 40%;
+  }
+
+  .parallax {
+    margin-right: 1.5rem;
+  }
+
+  .sticky {
+    margin-left: 1.5rem;
+  }
+}
+ /*-----------*/
