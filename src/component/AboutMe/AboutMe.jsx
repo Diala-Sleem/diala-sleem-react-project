@@ -1,8 +1,10 @@
-import React from 'react'
-import Hello from './Hello'
+import React from "react";
+import Hello from "./Hello";
 import Introduction from "./Introduction";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
+import image from "../../assets/image/Humaaans - Sitting copy.svg";
+import Card from "./Card";
 
 export default function AboutMe() {
   return (
@@ -76,11 +78,11 @@ export default function AboutMe() {
                   </a>
                 </div>
 
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <div className="position-absolute top-0 start-50 translate-middle image">
                   <img
-                    className="object-cover object-center rounded"
+                    className="rounded mx-auto d-block"
                     alt="hero"
-                    src="./coding.svg"
+                    src={image}
                   />
                 </div>
               </div>
@@ -88,6 +90,7 @@ export default function AboutMe() {
           </section>
         </ParallaxLayer>
       </Parallax>
+      <Card />
     </div>
   );
 }
