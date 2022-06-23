@@ -1,35 +1,52 @@
 const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+    icon: 'FaReact',
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reedbarger.com",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
   },
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
+    title: "CSS",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://jsbootcamp.com",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
+    title: "HTML",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://pythonbootcamp.com",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
+  },
+  {
+    title: "Photoshop",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
+  },
+  {
+    title: "Illustrator",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
+  },
+  {
+    title: "Indesign",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    image: "/support1_b_w.webp",
+    link: "https://movie-app-test-px03b5d67-diala-sleem.vercel.app",
   },
 ];
-export default  projects
+export default projects;

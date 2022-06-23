@@ -1,32 +1,147 @@
-import { SiCodeproject } from "react-icons/si";
 import React from "react";
-import projects  from "./data";
-import { Link } from "react-router-dom";
+import "./About.css";
 
-export default function Cards () {
-  
-  console.log(projects);
+import { FaReact } from "react-icons/fa";
+import { SiAdobeindesign } from "react-icons/si";
+
+
+import {
+  DiJavascript1,
+  DiCss3Full,
+  DiHtml5,
+  DiPhotoshop,
+  DiIllustrator,
+} from "react-icons/di";
+
+
+import CardGroup from "react-bootstrap/CardGroup";
+import Card from "react-bootstrap/Card";
+
+
+export default function Cards() {
   return (
-    <section id="projects" className="about-text about-parent">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white fw-bold  ">
-            Apps <SiCodeproject className="mx-auto inline-block w-10 mb-4" />
-            Gallery{" "}
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap -m-4">
-          {projects.map((project, index) => (
-            <div key={index}>{project.title}</div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div>
+      <CardGroup className="g-4 xs={1} md={}  ">
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Text>
+              <Card.Title>
+                <h1>
+                  {" "}
+                  <FaReact />
+                </h1>{" "}
+                <h1> React</h1>
+              </Card.Title>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Title>
+              <h1>
+                {" "}
+                <DiJavascript1 />
+              </h1>
+              <h1> Javascript</h1>
+            </Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+      <CardGroup className="g-4 xs={1} md={2} ">
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Text>
+              <Card.Title>
+                <h1>
+                  {" "}
+                  <DiCss3Full />
+                </h1>{" "}
+                <h1> CSS</h1>
+              </Card.Title>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Title>
+              <h1>
+                {" "}
+                <DiHtml5 />
+              </h1>
+              <h1> HTML</h1>
+            </Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+      <CardGroup className="g-4 xs={1} md={2} ">
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Text>
+              <Card.Title>
+                <h1>
+                  {" "}
+                  <DiPhotoshop />
+                </h1>{" "}
+                <h1> Photoshop</h1>
+              </Card.Title>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Title>
+              <h1>
+                {" "}
+                <DiIllustrator />
+              </h1>
+              <h1> Illustrator</h1>
+            </Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+      <CardGroup className="g-4 xs={1} md={2} ">
+        <Card style={{ height: "100%", margin: "15px" }}>
+          <Card.Body>
+            <Card.Text>
+              <Card.Title>
+                <h1>
+                  {" "}
+                  <SiAdobeindesign />
+                </h1>{" "}
+                <h1> Indesign</h1>
+              </Card.Title>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+    </div>
   );
 }
+

@@ -6,6 +6,8 @@
     background-color: var(--blue-trans);
     width: 100%;
     padding: 20px;
+        background: linear-gradient(#e66465, #9198e5);
+
 
    }
    .about-parent2 {
@@ -28,9 +30,16 @@
   display: inline;
 }
 
-
+.crardMargin{
+  margin:10px;
+}
   
 .container{
+  margin-top:50px;
+
+}
+
+.cardContainer{
   margin-top:50px;
 }
 .background {
@@ -92,3 +101,17 @@
 }
  /*-----------*/
 .image{width: 100px}
+
+
+.h1Style{  
+  font-size: 3rem;
+  letter-spacing: 0.9px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 211, 180, 1) 0%,
+    rgba(249, 211, 180, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  ;}
