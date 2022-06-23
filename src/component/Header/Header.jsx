@@ -1,9 +1,7 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
-import './Header.css'
-import { SiHomebridge,  } from "react-icons/si";
-
-
+import { NavLink } from "react-router-dom";
+import "./Header.css";
+import { SiHomebridge } from "react-icons/si";
 
 const Header = () => (
   <ul className="header-container">
@@ -19,7 +17,7 @@ const Header = () => (
     </li>
     <li>
       <NavLink to="/gallery" className="headerLink">
-        Callery
+        Gallery
       </NavLink>
     </li>
     <li>
@@ -36,7 +34,6 @@ const Header = () => (
 );
 
 export default Header;
-
 
 /*
       <Routes>
