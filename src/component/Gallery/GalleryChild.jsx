@@ -1,24 +1,16 @@
 import React from "react";
-
-const CalleryChild = ({ gallery }) => {
+const CalleryChild = ({image}) => {
   return (
-    <div className="card" key={gallery.imdbID}>
+    <div className="card">
       <div>
-        <p>{gallery.Year}</p>
+        <p>2022</p>
       </div>
       <div>
-        <img
-          src={
-            gallery.Poster !== "N/A"
-              ? gallery.Poster
-              : "https://via.placeholder.com/400"
-          }
-          alt={gallery.Title}
-        />
+        <img src={image} alt="design-webp" />
       </div>
       <div>
-        <span>{gallery.Type}</span>
-        <h3>{gallery.Title}</h3>
+        <span>'gallery.Type'</span>
+        <h3>'gallery.Title'</h3>
       </div>
     </div>
   );
