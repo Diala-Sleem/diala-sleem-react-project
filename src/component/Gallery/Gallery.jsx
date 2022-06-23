@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import GalleryChild from "./GalleryChild";
 import "./Gallery.css";
 import { SiCodeproject } from "react-icons/si";
@@ -20,8 +20,8 @@ const Gallery = () => {
         <div className="container px-5 py-10 mx-auto text-center lg:px-40">
           <GalleryChild image={"/design.webp"} />
           <GalleryChild image={"/growth_2.webp"} />
-          <GalleryChild image={"/design.webp"} />
-          <GalleryChild image={"/growth_2.webp"} />
+          <GalleryChild image={"/thumbsup_b_w.webp"} />
+          <GalleryChild image={"/websitedrivingclicks.webp"} />
         </div>
       </section>
     </div>

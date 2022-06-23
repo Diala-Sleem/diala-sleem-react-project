@@ -18,6 +18,11 @@ const Header = () => (
       </NavLink>
     </li>
     <li>
+      <NavLink to="/gallery" className="headerLink">
+        Callery
+      </NavLink>
+    </li>
+    <li>
       <NavLink to="/contact" className="headerLink">
         Contact
       </NavLink>
@@ -25,11 +30,6 @@ const Header = () => (
     <li>
       <NavLink to="/signUp" className="headerLink">
         Sign Up
-      </NavLink>
-    </li>
-    <li>
-      <NavLink to="/gallery" className="headerLink">
-        Callery
       </NavLink>
     </li>
   </ul>
